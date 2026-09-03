@@ -122,7 +122,7 @@ void RenderUpdateArrays( void )
     p_glSecondaryColorPointerEXT( 3, GL_FLOAT, 4 * sizeof( GLfloat ), &OGLRender.TColor2[0] );
     if ( InternalConfig.EXT_fog_coord )
     {
-        p_glFogCoordPointerEXT( 1, GL_FLOAT, &OGLRender.TFog[0] );
+        p_glFogCoordPointerEXT( (GLenum)1, GL_FLOAT, &OGLRender.TFog[0] );
     }
 
 #ifdef OPENGL_DEBUG

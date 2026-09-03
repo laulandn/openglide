@@ -14,6 +14,7 @@ openglext.lo: openglext.cpp ../../config.h /opt/local/include/SDL/SDL.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/abi.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/compiler.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/platform.h \
+  ../../features.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/language.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/experimental.h \
@@ -202,7 +203,7 @@ openglext.lo: openglext.cpp ../../config.h /opt/local/include/SDL/SDL.h \
   /opt/local/include/SDL/SDL_quit.h /opt/local/include/SDL/SDL_loadso.h \
   /opt/local/include/SDL/SDL_timer.h \
   /opt/local/include/SDL/SDL_version.h ../../platform/openglext.h \
-  ../../platform/linux/platform.h \
+  platform.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/unistd.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_posix_vdisable.h \
@@ -228,6 +229,7 @@ openglext.lo: openglext.cpp ../../config.h /opt/local/include/SDL/SDL.h \
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/abi.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/compiler.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/platform.h:
+../../features.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/availability.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/language.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/experimental.h:
@@ -423,7 +425,7 @@ openglext.lo: openglext.cpp ../../config.h /opt/local/include/SDL/SDL.h \
 /opt/local/include/SDL/SDL_timer.h:
 /opt/local/include/SDL/SDL_version.h:
 ../../platform/openglext.h:
-../../platform/linux/platform.h:
+platform.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/unistd.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_posix_vdisable.h:

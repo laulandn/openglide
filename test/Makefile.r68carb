@@ -1,0 +1,66 @@
+
+#CC = m68k-apple-macos-g++
+#CXX = m68k-apple-macos-g++
+CC = powerpc-apple-macos-gcc -carbon
+CXX = powerpc-apple-macos-g++ -carbon
+
+
+#CFLAGS=-I.. -I/opt/local/include -I.
+CFLAGS=-I..
+
+#LDFLAGS=../.libs/libglide2x.a -L/opt/local/lib -framework OpenGL
+#LDFLAGS=-L.. -lglide2x -lOpenGlLibrary -lOpenGLUtility -lm
+LDFLAGS=-L.. -lglide2x -lCarbonLib -lOpenGlLibrary -lOpenGLUtility -lm
+
+#SDLLIBS=-lSDLmain -lSDL -framework Cocoa -framework Carbon -framework IOKit -framework CoreVideo -framework AudioToolbox -framework ForceFeedback
+#SDLLIBS=-lSDL
+SDLLIBS=-lSDL -lDrawSprocketLib -lInputSprocketLib -lControlStripLib
+
+SDLMAIN=$(HOME)/SDL-1.2-main/obj/SDL_main.c.o
+
+
+all: sdl1glide2 glide2 test1glide2 test2glide2 test3glide2
+
+
+sdl1glide2:	sdl1glide2.o
+	$(CXX) -o sdl1glide2 $(SDLMAIN) sdl1glide2.o  $(LDFLAGS) $(SDLLIBS)
+	$(HOME)/sdl2macos9/xcoff2app.sh sdl1glide2
+
+sdl2glide2:	sdl2glide2.o
+	$(CXX) -o sdl2glide2 sdl2glide2.o $(LDFLAGS) -lSDL2main -lSDL2
+	$(HOME)/sdl2macos9/xcoff2app.sh sdl2glide2
+
+sdl3glide2:	sdl3glide2.o
+	$(CXX) -o sdl3glide2 sdl3glide2.o $(LDFLAGS) -lSDL3
+	$(HOME)/sdl2macos9/xcoff2app.sh sdl3glide2
+
+
+glide2:	glide2.o
+	$(CXX) -o glide2 glide2.o $(LDFLAGS) $(SDLLIBS) 
+	$(HOME)/sdl2macos9/xcoff2app.sh glide2
+
+glide2test:	glide2test.o
+	$(CXX) -o glide2test glide2test.o $(LDFLAGS) $(SDLLIBS) 
+	$(HOME)/sdl2macos9/xcoff2app.sh glide2test
+
+
+test1glide2:	test1glide2.o
+	$(CXX) -o test1glide2 test1glide2.o $(LDFLAGS) $(SDLLIBS) 
+	$(HOME)/sdl2macos9/xcoff2app.sh test1glide2
+
+test2glide2:	test2glide2.o
+	$(CXX) -o test2glide2 test2glide2.o $(LDFLAGS) $(SDLLIBS) 
+	$(HOME)/sdl2macos9/xcoff2app.sh test2glide2
+
+test3glide2:	test3glide2.o
+	$(CXX) -o test3glide2 test3glide2.o $(LDFLAGS) $(SDLLIBS) 
+	$(HOME)/sdl2macos9/xcoff2app.sh test3glide2
+
+
+glide3:	glide3.o
+	$(CXX) -o glide3 glide3.o $(LDFLAGS) -lSDL3
+	
+
+clean:
+	rm -f *.o glide2 glide2test glide3 sdl1glide2 sdl2glide2 sdl3glide2 test1glide2 test2glide2 test3glide2
+	rm -f *.bin *.APPL *.dsk *.gdb *.xcoff *.pef OpenGLid.*

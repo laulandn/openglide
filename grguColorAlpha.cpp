@@ -313,7 +313,7 @@ grAlphaTestFunction( GrCmpFnc_t function )
 
     // We can do this just because we know the constant values for both OpenGL and Glide
     // To port it to anything else than OpenGL we NEED to change this code
-    OpenGL.AlphaTestFunction = GL_NEVER + function;
+    OpenGL.AlphaTestFunction = (GLenum)(GL_NEVER + function);
 
     glEnable( GL_ALPHA_TEST );
     glAlphaFunc( OpenGL.AlphaTestFunction, OpenGL.AlphaReferenceValue );

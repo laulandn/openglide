@@ -142,7 +142,7 @@ grRenderBuffer( GrBuffer_t dwBuffer )
     Glide.State.RenderBuffer = dwBuffer;
 
     // Valid parameters are only FRONT and BACK ( 0x0 and 0x1 )
-    OpenGL.RenderBuffer = GL_FRONT + dwBuffer;
+    OpenGL.RenderBuffer = (GLenum)(GL_FRONT + dwBuffer);
 
     glDrawBuffer( OpenGL.RenderBuffer );
 

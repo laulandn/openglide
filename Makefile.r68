@@ -1,0 +1,33 @@
+LIBNAME=glide2x
+
+CC=m68k-apple-macos-gcc
+CXX=m68k-apple-macos-g++
+AR=m68k-apple-macos-ar
+RANLIB=m68k-apple-macos-ranlib
+#CC=powerpc-apple-macos-gcc
+#CXX=powerpc-apple-macos-g++
+#AR=powerpc-apple-macos-ar
+#RANLIB=powerpc-apple-macos-ranlib
+
+CFLAGS= -I. -Iplatform/macosclassic -I$(HOME)/Mesa-2.4.1/Headers -DFxU64="unsigned long long"
+
+OBJS=$(subst .c,.o,$(wildcard *.c)) $(subst .cpp,.o,$(wildcard *.cpp))
+
+.c.o:
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+.cpp.o:
+	$(CXX) $(CFLAGS) -c -o $@ $<
+
+
+lib: $(OBJS)
+	make -f Makefile.r68 -C platform
+	$(AR) rcv lib$(LIBNAME).a *.o */*/*.o
+	$(RANLIB) lib$(LIBNAME).a
+
+all: $(OBJS)
+	make -f Makefile.r68 -C platform
+
+clean:
+	make -f Makefile.r68 -C platform clean
+	rm -f *.o */*.o */*.*.o *.a *.lo

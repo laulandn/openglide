@@ -1,0 +1,8 @@
+
+all:
+	make -f Makefile.r68carb -C macosclassic
+	make -f Makefile.r68carb -C sdl
+
+clean:
+	make -f Makefile.r68carb -C macosclassic clean
+	make -f Makefile.r68carb -C sdl clean

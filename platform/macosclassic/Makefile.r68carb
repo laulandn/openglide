@@ -1,0 +1,25 @@
+
+#CC=m68k-apple-macos-gcc
+#CXX=m68k-apple-macos-g++
+#AR=m68k-apple-macos-ar
+#RANLIB=m68k-apple-macos-ranlib
+CC=powerpc-apple-macos-gcc -carbon
+CXX=powerpc-apple-macos-g++ -carbon
+AR=powerpc-apple-macos-ar
+RANLIB=powerpc-apple-macos-ranlib
+
+CFLAGS= -I. -I../.. -Iplatform/macosclassic -I$(HOME)/Mesa-2.4.1/Headers -I$(HOME)/Mesa-2.4.1/Headers/GL -DFxU64=long
+
+OBJS=$(subst .c,.o,$(wildcard *.c)) $(subst .cpp,.o,$(wildcard *.cpp))
+
+.c.o:
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+.cpp.o:
+	$(CXX) $(CFLAGS) -c -o $@ $<
+
+
+all: $(OBJS)
+
+clean:
+	rm -f *.o

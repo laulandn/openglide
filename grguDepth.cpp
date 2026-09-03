@@ -123,7 +123,7 @@ grDepthBufferFunction( GrCmpFnc_t func )
 
     // We can do this just because we know the constant values for both OpenGL and Glide
     // To port it to anything else than OpenGL we NEED to change this code
-    OpenGL.DepthFunction = GL_NEVER + func;
+    OpenGL.DepthFunction = (GLenum)(GL_NEVER + func);
 
     glDepthFunc( OpenGL.DepthFunction );
 

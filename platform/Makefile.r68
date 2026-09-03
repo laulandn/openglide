@@ -1,0 +1,8 @@
+
+all:
+	make -f Makefile.r68 -C macosclassic
+	make -f Makefile.r68 -C sdl
+
+clean:
+	make -f Makefile.r68 -C macosclassic clean
+	make -f Makefile.r68 -C sdl clean

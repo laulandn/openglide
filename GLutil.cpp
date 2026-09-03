@@ -288,9 +288,11 @@ void GetOptions( void )
 
     GlideMsg( "Configuration file is %s\n", Path );
     
-    if ( access( Path, 0 ) == -1 )
+    IniFile = fopen( Path, "w" );
+/*    if ( access( Path, 0 ) == -1 )*/
+    if(IniFile)
     {
-        IniFile = fopen( Path, "w" );
+        /*IniFile = fopen( Path, "w" );*/
         fprintf( IniFile, "Configuration File for OpenGLide\n\n" );
         fprintf( IniFile, "Info:\n" );
         fprintf( IniFile, "Priority goes from 0(HIGH) to 5(IDLE)\n" );
