@@ -1,2 +1,0 @@
-window.lo: window.cpp ../../config.h
-../../config.h:

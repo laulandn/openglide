@@ -1,2 +1,0 @@
-openglext.lo: openglext.cpp ../../config.h
-../../config.h:
