@@ -1,0 +1,2 @@
+Allocated 8 vertices and 12 faces (total 1376 bytes)
+Error loading texture: assets/textures/s_camino.pcx

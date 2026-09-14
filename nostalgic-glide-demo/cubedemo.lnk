@@ -1,0 +1,23 @@
+
+# cubedemo.exe linker directive file
+
+option stack=20480
+option verbose
+libpath %WATCOM%/lib286
+libpath %WATCOM%/lib286/dos
+lib emu87.lib
+name cubedemo
+
+file bitmap.obj
+file bumpmain.obj
+file bumpobj.obj
+file bumptri.obj
+file vga13h.obj
+file sys.obj
+file main.obj
+file math3d.obj
+file raster.obj
+file template.obj
+file texman.obj
+file texture.obj
+file envmap.obj

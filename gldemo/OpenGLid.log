@@ -1,0 +1,144 @@
+Configuration file is OpenGLid.ini
+--------------------------------------------------------
+** OpenGL Information **
+--------------------------------------------------------
+Vendor:      Brian Paul
+Renderer:    Mesa AGL_C32/16
+Version:     1.1 Mesa 2.4
+Extensions:  GL_EXT_blend_color GL_EXT_blend_minmax GL_EXT_blend_logic_op GL_EXT_blend_subtract GL_EXT_polygon_offset GL_EXT_vertex_array GL_EXT_texture_object GL_EXT_texture3D GL_MESA_window_pos GL_MESA_resize_buffers
+--------------------------------------------------------
+OpenGL Extensions:
+--------------------------------------------------------
+Severe Problem: OpenGL GL_EXT_abgr extension is required for OpenGLide!Severe Problem: OpenGL GL_EXT_bgra extension is required for OpenGLide!Note: OpenGL GL_EXT_secondary_color extension is not supported, emulating behavior.
+Note: OpenGL GL_ARB_multitexture extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_fog_coord extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_texture_env_add extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_texture_env_combine extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_texture_lod_bias extension is not supported, emulating behavior.
+Note: OpenGL GL_SGIS_generate_mipmap extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_paletted_texture extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_vertex_array extension is supported but disabled by user
+Note: OpenGL GL_EXT_blend_func_separate extension is not supported, emulating behavior.
+--------------------------------------------------------
+--------------------------------------------------------
+ Setting in Use: 
+--------------------------------------------------------
+Init Full Screen = false
+Fog = false
+Precision Fix = true
+Wrap 565 to 5551 = true
+Texture Memory Size = 16 Mb
+Frame Buffer Memory Size = 8 Mb
+MMX is not present
+--------------------------------------------------------
+--------------------------------------------------------
+** Glide Calls **
+--------------------------------------------------------
+Configuration file is OpenGLid.ini
+--------------------------------------------------------
+** OpenGL Information **
+--------------------------------------------------------
+Vendor:      Brian Paul
+Renderer:    Mesa AGL_C32/16
+Version:     1.1 Mesa 2.4
+Extensions:  GL_EXT_blend_color GL_EXT_blend_minmax GL_EXT_blend_logic_op GL_EXT_blend_subtract GL_EXT_polygon_offset GL_EXT_vertex_array GL_EXT_texture_object GL_EXT_texture3D GL_MESA_window_pos GL_MESA_resize_buffers
+--------------------------------------------------------
+OpenGL Extensions:
+--------------------------------------------------------
+Severe Problem: OpenGL GL_EXT_abgr extension is required for OpenGLide!Severe Problem: OpenGL GL_EXT_bgra extension is required for OpenGLide!Note: OpenGL GL_EXT_secondary_color extension is not supported, emulating behavior.
+Note: OpenGL GL_ARB_multitexture extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_fog_coord extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_texture_env_add extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_texture_env_combine extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_texture_lod_bias extension is not supported, emulating behavior.
+Note: OpenGL GL_SGIS_generate_mipmap extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_paletted_texture extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_vertex_array extension is supported but disabled by user
+Note: OpenGL GL_EXT_blend_func_separate extension is not supported, emulating behavior.
+--------------------------------------------------------
+--------------------------------------------------------
+ Setting in Use: 
+--------------------------------------------------------
+Init Full Screen = false
+Fog = false
+Precision Fix = true
+Wrap 565 to 5551 = true
+Texture Memory Size = 16 Mb
+Frame Buffer Memory Size = 8 Mb
+MMX is not present
+--------------------------------------------------------
+--------------------------------------------------------
+** Glide Calls **
+--------------------------------------------------------
+Configuration file is OpenGLid.ini
+--------------------------------------------------------
+** OpenGL Information **
+--------------------------------------------------------
+Vendor:      Brian Paul
+Renderer:    Mesa AGL_C32/16
+Version:     1.1 Mesa 2.4
+Extensions:  GL_EXT_blend_color GL_EXT_blend_minmax GL_EXT_blend_logic_op GL_EXT_blend_subtract GL_EXT_polygon_offset GL_EXT_vertex_array GL_EXT_texture_object GL_EXT_texture3D GL_MESA_window_pos GL_MESA_resize_buffers
+--------------------------------------------------------
+OpenGL Extensions:
+--------------------------------------------------------
+Severe Problem: OpenGL GL_EXT_abgr extension is required for OpenGLide!Severe Problem: OpenGL GL_EXT_bgra extension is required for OpenGLide!Note: OpenGL GL_EXT_secondary_color extension is not supported, emulating behavior.
+Note: OpenGL GL_ARB_multitexture extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_fog_coord extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_texture_env_add extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_texture_env_combine extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_texture_lod_bias extension is not supported, emulating behavior.
+Note: OpenGL GL_SGIS_generate_mipmap extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_paletted_texture extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_vertex_array extension is supported but disabled by user
+Note: OpenGL GL_EXT_blend_func_separate extension is not supported, emulating behavior.
+--------------------------------------------------------
+--------------------------------------------------------
+ Setting in Use: 
+--------------------------------------------------------
+Init Full Screen = false
+Fog = false
+Precision Fix = true
+Wrap 565 to 5551 = true
+Texture Memory Size = 16 Mb
+Frame Buffer Memory Size = 8 Mb
+MMX is not present
+--------------------------------------------------------
+--------------------------------------------------------
+** Glide Calls **
+--------------------------------------------------------
+Configuration file is OpenGLid.ini
+--------------------------------------------------------
+** OpenGL Information **
+--------------------------------------------------------
+Vendor:      Brian Paul
+Renderer:    Mesa AGL_C32/16
+Version:     1.1 Mesa 2.4
+Extensions:  GL_EXT_blend_color GL_EXT_blend_minmax GL_EXT_blend_logic_op GL_EXT_blend_subtract GL_EXT_polygon_offset GL_EXT_vertex_array GL_EXT_texture_object GL_EXT_texture3D GL_MESA_window_pos GL_MESA_resize_buffers
+--------------------------------------------------------
+OpenGL Extensions:
+--------------------------------------------------------
+Severe Problem: OpenGL GL_EXT_abgr extension is required for OpenGLide!Severe Problem: OpenGL GL_EXT_bgra extension is required for OpenGLide!Note: OpenGL GL_EXT_secondary_color extension is not supported, emulating behavior.
+Note: OpenGL GL_ARB_multitexture extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_fog_coord extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_texture_env_add extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_texture_env_combine extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_texture_lod_bias extension is not supported, emulating behavior.
+Note: OpenGL GL_SGIS_generate_mipmap extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_paletted_texture extension is not supported, emulating behavior.
+Note: OpenGL GL_EXT_vertex_array extension is supported but disabled by user
+Note: OpenGL GL_EXT_blend_func_separate extension is not supported, emulating behavior.
+--------------------------------------------------------
+--------------------------------------------------------
+ Setting in Use: 
+--------------------------------------------------------
+Init Full Screen = false
+Fog = false
+Precision Fix = true
+Wrap 565 to 5551 = true
+Texture Memory Size = 16 Mb
+Frame Buffer Memory Size = 8 Mb
+MMX is not present
+--------------------------------------------------------
+--------------------------------------------------------
+** Glide Calls **
+--------------------------------------------------------

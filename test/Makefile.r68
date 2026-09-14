@@ -10,6 +10,7 @@ CFLAGS=-I..
 
 #LDFLAGS=../.libs/libglide2x.a -L/opt/local/lib -framework OpenGL
 LDFLAGS=-L.. -lOpenGlLibrary -lOpenGLUtility -lm
+#LDFLAGS=-L.. -L$(HOME)/tinygl/lib -lTinyGL -lOpenGLUtility -lm
 
 #SDLLIBS=-lSDLmain -lSDL -framework Cocoa -framework Carbon -framework IOKit -framework CoreVideo -framework AudioToolbox -framework ForceFeedback
 #SDLLIBS=-lSDL
@@ -27,11 +28,11 @@ sdl1glide2:	sdl1glide2.o
 	$(HOME)/sdl2macos9/bin2app.sh sdl1glide2
 
 sdl2glide2:	sdl2glide2.o
-	$(CXX) -o sdl2glide2.code.bin sdl2glide2.o $(LDFLAGS) -lSDL2main -lSDL2
+	$(CXX) -o sdl2glide2.code.bin sdl2glide2.o $(GLIDELIBS) -lSDL2main -lSDL2 $(LDFLAGS) -lInputSprocketLib -lDrawSprocketLib $(HOME)/sdl2macos9/macos8addons/libmacos8addons.a
 	$(HOME)/sdl2macos9/bin2app.sh sdl2glide2
 
 sdl3glide2:	sdl3glide2.o
-	$(CXX) -o sdl3glide2.code.bin sdl3glide2.o $(LDFLAGS) -lSDL3
+	$(CXX) -o sdl3glide2.code.bin sdl3glide2.o $(LDFLAGS) $(GLIDELIBS) -lSDL3 $(LDFLAGS) -lInputSprocketLib -lDrawSprocketLib $(HOME)/sdl2macos9/macos8addons/libmacos8addons.a
 	$(HOME)/sdl2macos9/bin2app.sh sdl3glide2
 
 
