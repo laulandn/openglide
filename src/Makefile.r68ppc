@@ -1,5 +1,7 @@
 LIBNAME=glide2x
 
+PATH_TO_RETRO68=$(HOME)/Retro68-build/toolchain/m68k-apple-macos
+
 #CC=m68k-apple-macos-gcc
 #CXX=m68k-apple-macos-g++
 #AR=m68k-apple-macos-ar
@@ -9,9 +11,11 @@ CXX=powerpc-apple-macos-g++
 AR=powerpc-apple-macos-ar
 RANLIB=powerpc-apple-macos-ranlib
 
-CFLAGS= -I. -Iplatform/macosclassic -DFxU64="unsigned long long"
+CFLAGS= -I. -Iplatform/macosclassic -I$(PATH_TO_RETRO68)/include/GL -DFxU64="unsigned long long"
+
 
 OBJS=$(subst .c,.o,$(wildcard *.c)) $(subst .cpp,.o,$(wildcard *.cpp))
+
 
 .c.o:
 	$(CC) $(CFLAGS) -c -o $@ $<
@@ -20,14 +24,11 @@ OBJS=$(subst .c,.o,$(wildcard *.c)) $(subst .cpp,.o,$(wildcard *.cpp))
 	$(CXX) $(CFLAGS) -c -o $@ $<
 
 
-lib: $(OBJS)
+all: $(OBJS)
 	make -f Makefile.r68ppc -C platform
 	$(AR) rcv lib$(LIBNAME).a *.o */*/*.o
 	$(RANLIB) lib$(LIBNAME).a
 
-all: $(OBJS)
-	make -f Makefile.r68ppc -C platform
-
 clean:
-	make -f Makefile.r68ppc -C platform clean
+	make -f Makefile.r68 -C platform clean
 	rm -f *.o */*.o */*.*.o *.a *.lo

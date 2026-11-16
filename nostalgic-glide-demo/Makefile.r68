@@ -9,14 +9,14 @@ RANLIB=m68k-apple-macos-ranlib
 #RANLIB=powerpc-apple-macos-ranlib
 
 #CFLAGS= -I../include
-CFLAGS= -I$(HOME)/openglide
+CFLAGS= -I..
 
 LDFLAGS=-lOpenGlLibrary -lOpenGLUtility -lm
 
 SDLLIBS=-lSDL
-GLIDELIBS=-L$(HOME)/openglide -lglide2x 
+GLIDELIBS=-L.. -lglide2x 
 
-SDLMAIN=$(HOME)/SDL-1.2-main/obj/SDL_main.c.o
+SDLMAIN=../../SDL-1.2-main/obj/SDL_main.c.o
 
 
 OBJS=$(subst .c,.o,$(wildcard *.c))
@@ -27,7 +27,7 @@ OBJS=$(subst .c,.o,$(wildcard *.c))
 
 nostalgicglidedemo: $(OBJS)
 	$(CXX) -o nostalgicglidedemo.code.bin $(SDLMAIN) $(OBJS) $(GLIDELIBS) $(SDLLIBS) $(LDFLAGS)
-	$(HOME)/sdl2macos9/bin2app.sh nostalgicglidedemo
+	../bin2app.sh nostalgicglidedemo
 
 clean:
-	rm -f *.o *.a *.APPL *.dsk *.xcoff *.pef *.bin *.gdb
+	rm -f *.o *.a *.APPL *.dsk *.xcoff *.pef *.bin *.gdb nostalgicglidedemo

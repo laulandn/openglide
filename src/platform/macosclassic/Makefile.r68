@@ -1,3 +1,4 @@
+PATH_TO_RETRO68=$(HOME)/Retro68-build/toolchain/m68k-apple-macos
 
 CC=m68k-apple-macos-gcc
 CXX=m68k-apple-macos-g++

@@ -1,0 +1,33 @@
+
+#CC=m68k-apple-macos-gcc
+#CXX=m68k-apple-macos-g++
+#AR=m68k-apple-macos-ar
+#RANLIB=m68k-apple-macos-ranlib
+#CC=powerpc-apple-macos-gcc
+#CXX=powerpc-apple-macos-g++
+#AR=powerpc-apple-macos-ar
+#RANLIB=powerpc-apple-macos-ranlib
+
+#CFLAGS= -I../include
+CFLAGS= -I..
+
+LDFLAGS=-lgl -lglu -lm -lX11
+
+SDLLIBS=-lSDL
+GLIDELIBS=-L.. -lglide2x -L/opt/local/lib
+
+#SDLMAIN=../../SDL-1.2-main/obj/SDL_main.c.o
+
+
+OBJS=$(subst .c,.o,$(wildcard *.c))
+
+.c.o:
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+
+GlideDemo: GlideDemo.o
+	$(CXX) -o GlideDemo $(SDLMAIN) GlideDemo.o $(GLIDELIBS) $(SDLLIBS) $(LDFLAGS)
+#	../bin2app.sh GlideDemo
+
+clean:
+	rm -f *.o *.a *.APPL *.dsk *.xcoff *.pef *.bin *.gdb GlideDemo

@@ -13,7 +13,9 @@ RANLIB=m68k-apple-macos-ranlib
 
 CFLAGS= -I. -Iplatform/macosclassic -I$(PATH_TO_RETRO68)/include/GL -DFxU64="unsigned long long"
 
+
 OBJS=$(subst .c,.o,$(wildcard *.c)) $(subst .cpp,.o,$(wildcard *.cpp))
+
 
 .c.o:
 	$(CC) $(CFLAGS) -c -o $@ $<

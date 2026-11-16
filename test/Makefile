@@ -5,47 +5,57 @@
 #CXX = powerpc-apple-macos-gcc
 
 
-CFLAGS=-I.. -I/opt/local/include -I..
-#CFLAGS=-I..
+#CFLAGS=-I.. -I/opt/local/include -I.
+CFLAGS=-I.. -I/opt/local/include
 
-LDFLAGS=../.libs/libglide2x.a -L/opt/local/lib -framework OpenGL
-#LDFLAGS=-L.. -lglide2x -lOpenGlLibrary -lOpenGLUtility -lm
+#LDFLAGS=../.libs/libglide2x.a -L/opt/local/lib -framework OpenGL
+LDFLAGS=-L/opt/local/lib -L.. -lgl -lglu -lm
+#LDFLAGS=-L.. -L$(HOME)/tinygl/lib -lTinyGL -lOpenGLUtility -lm
 
-SDLLIBS=-lSDLmain -lSDL -framework Cocoa -framework Carbon -framework IOKit -framework CoreVideo -framework AudioToolbox -framework ForceFeedback
+#SDLLIBS=-lSDLmain -lSDL -framework Cocoa -framework Carbon -framework IOKit -framework CoreVideo -framework AudioToolbox -framework ForceFeedback
 #SDLLIBS=-lSDL
+SDLLIBS=-lSDL
+GLIDELIBS=-lglide2x 
 
-SDLMAIN=
-#SDLMAIN=$(HOME)/SDL-1.2-main/obj/SDL_main.c.o
+SDLMAIN=-lSDLmain
 
 
 all: sdl1glide2 glide2 test1glide2 test2glide2 test3glide2
 
 
 sdl1glide2:	sdl1glide2.o
-	$(CXX) -o sdl1glide2 $(SDLMAIN) sdl1glide2.o $(LDFLAGS) $(SDLLIBS)
+	$(CXX) -o sdl1glide2 $(SDLMAIN) sdl1glide2.o $(GLIDELIBS) $(SDLLIBS) $(LDFLAGS)
+#	../bin2app.sh sdl1glide2
 
 sdl2glide2:	sdl2glide2.o
-	$(CXX) -o sdl2glide2 sdl2glide2.o $(LDFLAGS) -lSDL2main -lSDL2
+	$(CXX) -o sdl2glide2 sdl2glide2.o $(GLIDELIBS) -lSDL2main -lSDL2 $(LDFLAGS) -lInputSprocketLib -lDrawSprocketLib ../../sdl2macos9/macos8addons/libmacos8addons.a
+#	../bin2app.sh sdl2glide2
 
 sdl3glide2:	sdl3glide2.o
-	$(CXX) -o sdl3glide2 sdl3glide2.o $(LDFLAGS) -lSDL3
+	$(CXX) -o sdl3glide2 sdl3glide2.o $(LDFLAGS) $(GLIDELIBS) -lSDL3 $(LDFLAGS) -lInputSprocketLib -lDrawSprocketLib ../../sdl3macos9/macos8addons/libmacos8addons.a
+#	../bin2app.sh sdl3glide2
 
 
 glide2:	glide2.o
-	$(CXX) -o glide2 glide2.o $(LDFLAGS) $(SDLLIBS) 
+	$(CXX) -o glide2 glide2.o $(GLIDELIBS) $(SDLLIBS) $(LDFLAGS)
+#	../bin2app.sh glide2
 
 glide2test:	glide2test.o
-	$(CXX) -o glide2test glide2test.o $(LDFLAGS) $(SDLLIBS) 
+	$(CXX) -o glide2test glide2test.o $(GLIDELIBS) $(SDLLIBS) $(LDFLAGS)
+#	../bin2app.sh glide2test
 
 
 test1glide2:	test1glide2.o
-	$(CXX) -o test1glide2 test1glide2.o $(LDFLAGS) $(SDLLIBS) 
+	$(CXX) -o test1glide2 $(SDLMAIN) test1glide2.o $(GLIDELIBS) $(SDLLIBS) $(LDFLAGS) 
+#	../bin2app.sh test1glide2
 
 test2glide2:	test2glide2.o
-	$(CXX) -o test2glide2 test2glide2.o $(LDFLAGS) $(SDLLIBS) 
+	$(CXX) -o test2glide2 $(SDLMAIN) test2glide2.o $(GLIDELIBS) $(SDLLIBS) $(LDFLAGS)
+#	../bin2app.sh test2glide2
 
 test3glide2:	test3glide2.o
-	$(CXX) -o test3glide2 test3glide2.o $(LDFLAGS) $(SDLLIBS) 
+	$(CXX) -o test3glide2 $(SDLMAIN) test3glide2.o $(GLIDELIBS) $(SDLLIBS) $(LDFLAGS)
+#	../bin2app.sh test3glide2
 
 
 glide3:	glide3.o
@@ -53,5 +63,5 @@ glide3:	glide3.o
 	
 
 clean:
-	rm -f *.o glide2 glide2test glide3 sdl1glide2 sdl2glide2 sdl3glide2 test1glde2 test2glde2 test3glde2
+	rm -f *.o glide2 glide2test glide3 sdl1glide2 sdl2glide2 sdl3glide2 test1glide2 test2glide2 test3glide2
 	rm -f *.bin *.APPL *.dsk *.gdb *.xcoff *.pef OpenGLid.*

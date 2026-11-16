@@ -1,0 +1,15 @@
+
+all: $(OBJS)
+	make -f Makefile.r68ppc -C src
+	cp */*.a .
+	cp src/glide.h src/sdk2_*.h .
+	make -f Makefile.r68ppc -C test
+	make -f Makefile.r68ppc -C gldemo
+	make -f Makefile.r68ppc -C nostalgic-glide-demo
+
+clean:
+	make -f Makefile.r68ppc -C src clean
+	make -f Makefile.r68ppc -C test clean
+	make -f Makefile.r68ppc -C gldemo clean
+	make -f Makefile.r68ppc -C nostalgic-glide-demo clean
+	rm -f *.a *.h
